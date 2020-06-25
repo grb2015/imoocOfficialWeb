@@ -1,23 +1,42 @@
+<!-- 
+    breif   :   模仿慕课网，学习css
+    history :   rbg created 20200625
+    note    :   height与line-height的区别 https://blog.csdn.net/a2013126370/article/details/82786681
+ -->
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>欢迎访问慕课网！</title>
         <style>
+            /* 必须要加入* 和body 这两个样式,不然会有问题*/
+            * {
+                padding: 0;
+                margin: 0;
+                font-size: 12px;
+            }
+            body {
+                background-color: #F5F5F5;
+            }
+
             .top{
-                    background-color: 	#DCDCDC; 
+                    /* background-color: 	#DCDCDC;  */
                     border: solid 1px;  
                     width:100% ;
-                    height: 30px;
+                    height: 27px;
+                    background: url(images/top_bg.jpg) repeat-x;
                 }
             .top_content{
                 border:solid 1px red;
-                /* height: 30px; */
-                line-height: 30px;
+                margin: 0 auto;
+                width:1000px;
+                height: 27px;       /*我这里必须设置为height,官方的代码是line-height*/
             }
             .top_content li{
                 float: right;
+                width: 70px;        /*为了让几个li之间分开一点距离*/
                 /* list-style-image: none; */
                 /* list-style-type: none; */
+                line-height: 27px;   /*将li的line-height设置为与父div一致 实现垂直居中*/
                 list-style-image: url(images/arrow.jpg);   /*li前面的箭头*/
             }
         </style>
@@ -26,9 +45,9 @@
         <div class="top"> <!--导航栏-->
             <div class="top_content">
                 <ul>
-                    <li>联系我们&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                    <li>加入收藏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                    <li>设为首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                    <li>联系我们</li> 
+                    <li>加入收藏</li>
+                    <li>设为首页</li>
                 </ul>
             </div>
        </div>
