@@ -5,7 +5,7 @@
  -->
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-eqliv="Content-Type" content="text/html; charset=utf-8" />
         <title>欢迎访问慕课网！</title>
         <style>
             /* 必须要加入* 和body 这两个样式,不然会有问题*/
@@ -39,10 +39,21 @@
                 line-height: 27px;   /*将li的line-height设置为与父div一致 实现垂直居中*/
                 list-style-image: url(images/arrow.jpg);   /*li前面的箭头*/
             }
+            .nav_li{
+                float:left;
+                width: 90px;
+                list-style-type: none;
+                color: white;
+                font-size: 20px;
+                line-height: 40px;
+                border:1px yellow solid;
+                text-align: center;   /*让li的文字居中显示在li框中*/
+            }
             .top_content li:hover{
                 color: #C00;
                 text-decoration: none;
             }
+
         </style>
     </head>
     <body>
@@ -57,7 +68,7 @@
        </div>
 
 
-        <div style="width: 1000px;border:solid green 4px;margin:0 auto">    <!---中的div wrap-->
+        <div style="width: 1000px;border:solid green 4px;margin:5px auto">    <!---中的div wrap-->
             <!-- 慕课网图标区begin -->
             <div style="height: 80px;">   
                     <div style="height: 80px;width:200px;border: 2px red solid;float: left;">   <!--logo图片的div-->
@@ -74,6 +85,34 @@
                     </div>
             </div>
              <!-- 慕课网图标区end-->
+
+             <!---导航栏begin-->
+             <div style="border: 2px coral solid;margin:10px 0;height:40px ;background-color: #A9A9A9;">
+                    <!-- 总共的width 1000 = 600 + 300 + 100 -->
+                    <!-- width:600px -->
+                <div style="border: 2px blue solid;height: 40px ;width:600px;float:left">
+                            <ul>
+                                    <li class="nav_li">首页</li>
+                                    <li class="nav_li">关于慕课</li>
+                                    <li class="nav_li">新闻动态</li>
+                                    <li class="nav_li">课程中心</li>
+                                    <li class="nav_li">在线课程</li>
+                                    <li class="nav_li">人才招聘</li>
+                            </ul>
+                    </div>
+
+                    <!-- width:300px -->
+                    <div style="border: red solid 1px ;height: 40px ;width:300px;background-color: white;float:left">
+                        <div style="border: red solid 1px ;height: 25px ;width:25px ;float:right;margin:3px;margin-right: 10px;">
+                                <img src="images/search.jpg" style="border:solid blue 4px "></img>
+                        </div>
+                        
+
+                    </div>
+                    
+             </div>
+            
+             <!---导航栏end-->
     
         </div>
            
